@@ -7,8 +7,8 @@ Review Board playground powered by Vagrant.
 Requirements
 ------------
 
-    * Vagrant 1.4.3+
-    * VirtualBox 4.3.6+
+* Vagrant 1.4.3+
+* VirtualBox 4.3.6+
 
 
 Usage
