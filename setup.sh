@@ -9,9 +9,12 @@ sudo debconf-set-selections <<< 'mysql-server-5.5 mysql-server/root_password_aga
 
 sudo apt-get install -qq -y python-dev python-setuptools \
   apache2 libapache2-mod-wsgi \
-  mysql-server libmysqlclient-dev memcached patch
+  mysql-server libmysqlclient-dev memcached \
+  patch git mercurial
 
-sudo easy_install --quiet ReviewBoard python-memcached mysql-python
+sudo easy_install --quiet python-memcached mysql-python
+sudo easy_install -f http://downloads.reviewboard.org/releases/ReviewBoard/2.0/ -U ReviewBoard
+sudo easy_install -f http://downloads.reviewboard.org/releases/RBTools/0.5/ -U RBTools
 
 sudo service mysql restart
 
