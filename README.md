@@ -14,6 +14,10 @@ Requirements
 Usage
 -----
 
+0. Install dev version of RBTools:
+
+        pip install -U --force-reinstall git+git://github.com/reviewboard/rbtools.git#egg=RBTools
+
 1. Add the following line to your `/etc/hosts`:
 
         10.0.20.2       rb.dev
@@ -21,11 +25,6 @@ Usage
 2. Provision a VM using Vagrant:
 
         vagrant up
-
-3. Open [http://rb.dev/](http://rb.dev/) in your browser:
-
-    * username: admin
-    * password: admin
 
 
 Details
@@ -39,7 +38,6 @@ The following things are installed:
 * Memcached
 * Git & Mercurial
 * ReviewBoard 2.0 (dev)
-* RBTools 0.5
 
 ### MySQL credentials:
 

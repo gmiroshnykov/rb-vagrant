@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-export RB_HOST="rb.dev"
-
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get update -qq
 
@@ -14,13 +12,13 @@ sudo apt-get install -qq -y python-dev python-setuptools \
 
 sudo easy_install --quiet python-memcached mysql-python
 sudo easy_install -f http://downloads.reviewboard.org/releases/ReviewBoard/2.0/ -U ReviewBoard
-sudo easy_install -f http://downloads.reviewboard.org/releases/RBTools/0.5/ -U RBTools
 
 sudo service mysql restart
 
 mysqladmin --user=root --password=root create reviewboard
 mysql --user=root --password=root --execute="GRANT ALL PRIVILEGES ON reviewboard.* TO 'reviewboard'@'localhost' IDENTIFIED BY 'reviewboard';"
 
+export RB_HOST="rb.dev"
 sudo rb-site install \
   --noinput \
   --domain-name=${RB_HOST} \
