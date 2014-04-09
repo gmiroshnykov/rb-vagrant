@@ -7,16 +7,12 @@ Review Board playground powered by Vagrant.
 Requirements
 ------------
 
-* Vagrant 1.4.3+
-* VirtualBox 4.3.6+
+* Vagrant 1.5.2+
+* VirtualBox 4.3.10+
 
 
 Usage
 -----
-
-0. Install dev version of RBTools:
-
-        pip install -U --force-reinstall git+git://github.com/reviewboard/rbtools.git#egg=RBTools
 
 1. Add the following line to your `/etc/hosts`:
 

@@ -1,0 +1,3 @@
+[submodule "reviewboard-mercurial-hook"]
+	path = reviewboard-mercurial-hook
+	url = git@github.com:laggyluke/reviewboard-mercurial-hook.git

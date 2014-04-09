@@ -8,9 +8,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "precise64"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
+  config.vm.hostname = "rb.dev"
   config.vm.network :private_network, ip: "10.0.20.2"
-  # config.vm.network :public_network
-  # config.vm.synced_folder ".", "/opt/reviewboard", type: "nfs"
+  config.vm.synced_folder "playground-central", "/var/hg/playground-central"
+  config.vm.synced_folder "reviewboard-mercurial-hook", "/opt/reviewboard-mercurial-hook"
 
   config.ssh.forward_agent = true
 

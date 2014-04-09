@@ -1,0 +1,5 @@
+[hooks]
+pretxnchangegroup = /usr/bin/env \
+    REVIEWBOARD_URL=http://rb.dev \
+    REVIEWBOARD_REPOSITORY=1 \
+    /opt/reviewboard-mercurial-hook/bin/pretxnchangegroup
