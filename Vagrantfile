@@ -19,5 +19,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.cpus = 2
   end
 
-  config.vm.provision "shell", path: "./setup.sh"
+  config.vm.provision "shell", path: "./setup.sh", privileged: false
 end
