@@ -13,11 +13,6 @@ sudo apt-get install -qq -y vim screen curl python-dev python-setuptools \
   mysql-server libmysqlclient-dev memcached \
   patch git mercurial
 
-# install Node.js
-sudo add-apt-repository -y ppa:chris-lea/node.js
-sudo apt-get update -qq
-sudo apt-get install -y nodejs
-
 pushd /opt/reviewboard-mercurial-hook
   npm install
 popd
@@ -33,11 +28,6 @@ sudo service ssh restart
 sudo easy_install --quiet python-memcached mysql-python
 sudo easy_install --quiet -f http://downloads.reviewboard.org/releases/ReviewBoard/2.0/ -U ReviewBoard
 sudo easy_install --quiet rbbz
-
-# FIXME: patch ReviewBoard
-pushd /usr/local/lib/python2.7/dist-packages/ReviewBoard-2.0*.egg/reviewboard
-  curl -s https://gist.githubusercontent.com/laggyluke/a7f9b082ad7db95ab564/raw/db5fc4e7e49eaf882f428f1f5581f7aa14b82be8/gistfile1.diff | sudo patch -p1
-popd
 
 # restart MySQL (why?)
 sudo service mysql restart
